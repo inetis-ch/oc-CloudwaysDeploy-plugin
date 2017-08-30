@@ -1,10 +1,8 @@
 # Automate Git Deployment Using Webhooks on Cloudways
 
-##Prerequisites
-Before using this plugin, you need to configure the exchange of SSH key between Cloudways and the repo. See https://support.cloudways.com/using-git-for-deployment/ for instructions
-
 ## Setup
 * Install the component
+* Configure the exchange of SSH key between Cloudways and the repo. See https://support.cloudways.com/using-git-for-deployment/ for instructions
 * Create SSH key -> https://support.cloudways.com/using-git-for-deployment/ for instructions
 * Create a Cloudways API key: Log into the Cloudways Platform,  and generate your API key using this link. Copy the Key and Email as it will be required in the settings of the plugin
 * Configure your plugin in the "Settings area"
