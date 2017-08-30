@@ -3,9 +3,9 @@
 
 ## Setup
 * Install the component
-* Configure the exchange of SSH key between Cloudways](https://www.cloudways.com/en/?id=34059) and the repo. See https://support.cloudways.com/using-git-for-deployment/ for instructions
+* Configure the exchange of SSH key between [Cloudways](https://www.cloudways.com/en/?id=34059) and the repo. See https://support.cloudways.com/using-git-for-deployment/ for instructions
 * Create SSH key -> https://support.cloudways.com/using-git-for-deployment/ for instructions
-* Create a Cloudways API key: Log into the Cloudways](https://www.cloudways.com/en/?id=34059) Platform,  and generate your API key using this link. Copy the Key and Email as it will be required in the settings of the plugin
+* Create a Cloudways API key: Log into the [Cloudways](https://www.cloudways.com/en/?id=34059) Platform,  and generate your API key using this link. Copy the Key and Email as it will be required in the settings of the plugin
 * Configure your plugin in the "Settings area"
 <img src="https://pbs.twimg.com/media/DID2FX4XoAAFz8o.jpg:large">
  
