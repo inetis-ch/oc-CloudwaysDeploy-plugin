@@ -1,0 +1,43 @@
+fields:
+    api_key:
+        label: 'Cloudways API Key'
+        oc.commentPosition: ''
+        span: auto
+        type: text
+
+    api_url:
+        label: 'API Url'
+        span: auto
+        type: text
+        default: 'https://api.cloudways.com/api/v1'
+
+    email:
+        label: 'Cloudways Email'
+        span: auto
+        type: text
+
+    server_id:
+        label: 'Server id'
+        span: auto
+        type: text
+
+    app_id:
+        label: 'App id'
+        span: auto
+        type: text
+
+    git_url:
+        label: 'GitHub url'
+        span: auto
+        type: text
+        default: 'git@github.com:username/reponame.git'
+
+    branch_name:
+        label: 'Branch name'
+        span: auto
+        type: text
+        default: 'master'
+
+    content:
+        type: partial
+        path: $/inetis/cloudwaysdeploy/models/settings/_route_info.htm
