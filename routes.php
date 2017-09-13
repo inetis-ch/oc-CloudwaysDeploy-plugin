@@ -1,18 +1,21 @@
 <?php
+
 use Inetis\CloudwaysDeploy\Models\Settings;
-use October\Rain\Network\Http;
 use October\Rain\Exception\SystemException;
+use October\Rain\Network\Http;
 
-Route::get( 'inetis/cloudwaysdeploy', function () {
+Route::post('inetis/cloudwaysdeploy/{token}', function ($token) {
 
-    $tokenResponse = callCloudwaysAPI('/oauth/access_token', null
-        , [
-            'email'   => Settings::get('email'),
-            'api_key' => Settings::get('api_key')
-        ]);
-    $accessToken   = $tokenResponse->access_token;
+    if ($token !== Settings::get('token')) {
+        throw new Exception('Wrong token', 403);
+    }
 
-    $gitPullResponse = callCloudWaysAPI('/git/pull', $accessToken, [
+    $accessToken = callCloudwaysAPI('/oauth/access_token', null, [
+        'email'   => Settings::get('email'),
+        'api_key' => Settings::get('api_key')
+    ]);
+
+    $gitPullResponse = callCloudWaysAPI('/git/pull', $accessToken->access_token, [
         'server_id'   => Settings::get('server_id'),
         'app_id'      => Settings::get('app_id'),
         'git_url'     => Settings::get('git_url'),
@@ -47,7 +50,6 @@ function callCloudwaysAPI($url, $accessToken, $post = [])
         if (count($post)) {
             $http->data($post);
         }
-
     });
 
     if ($result->code != '200') {

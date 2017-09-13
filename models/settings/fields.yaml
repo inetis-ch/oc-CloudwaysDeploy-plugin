@@ -1,18 +1,16 @@
 fields:
+    deploy_section:
+        label: Deploy settings
+        type: section
+
     api_key:
         label: 'Cloudways API Key'
         oc.commentPosition: ''
         span: auto
         type: text
 
-    api_url:
-        label: 'API Url'
-        span: auto
-        type: text
-        default: 'https://api.cloudways.com/api/v1'
-
     email:
-        label: 'Cloudways Email'
+        label: 'Cloudways account email'
         span: auto
         type: text
 
@@ -38,6 +36,23 @@ fields:
         type: text
         default: 'master'
 
-    content:
-        type: partial
-        path: $/inetis/cloudwaysdeploy/models/settings/_route_info.htm
+    webhook:
+        label: 'WebHook URL'
+        span: full
+        type: text
+        readOnly: true
+
+    advanced_section:
+        label: Advanced settings
+        type: section
+
+    api_url:
+        label: 'API Url'
+        span: auto
+        type: text
+        default: 'https://api.cloudways.com/api/v1'
+
+    token:
+        label: 'Token used for limit access to deploy URL'
+        span: auto
+        type: text
