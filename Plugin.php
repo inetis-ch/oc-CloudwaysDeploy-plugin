@@ -18,9 +18,10 @@ class Plugin extends PluginBase
     {
         return [
             'name'        => 'Cloudways AutoDeploy',
-            'description' => 'WebHook to setup an autodeploy on CloudWay from Github',
-            'author'      => 'Inetis',
-            'icon'        => 'icon-cloud'
+            'description' => 'Automate Git Deployment Using Webhooks on Cloudways',
+            'author'      => 'inetis',
+            'icon'        => 'icon-cloud',
+            'homepage'    => 'https://github.com/inetis-ch/oc-CloudwaysDeploy-plugin'
         ];
     }
 
