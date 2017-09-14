@@ -1,3 +1,4 @@
 1.0.1:
     - First version of CloudwaysDeploy
     - generate_token.php
+1.0.2: Renaming token in webhook_token

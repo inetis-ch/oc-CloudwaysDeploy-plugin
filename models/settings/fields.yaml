@@ -52,7 +52,7 @@ fields:
         type: text
         default: 'https://api.cloudways.com/api/v1'
 
-    token:
+    webhook_token:
         label: 'Token used for limit access to deploy URL'
         span: auto
         type: text

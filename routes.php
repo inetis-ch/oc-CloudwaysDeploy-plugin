@@ -4,9 +4,9 @@ use Inetis\CloudwaysDeploy\Models\Settings;
 use October\Rain\Exception\SystemException;
 use October\Rain\Network\Http;
 
-Route::post('inetis/cloudwaysdeploy/{token}', function ($token) {
+Route::post('inetis/cloudwaysdeploy/{webhook_token}', function ($webhookToken) {
 
-    if ($token !== Settings::get('token')) {
+    if ($webhookToken !== Settings::get('webhook_token')) {
         throw new Exception('Wrong token', 403);
     }
 

@@ -7,13 +7,13 @@ class InitializeToken extends Migration
 {
     public function up()
     {
-        if (!Settings::instance()->token) {
-            Settings::set('token', str_random(32));
+        if (!Settings::instance()->webhook_token) {
+            Settings::set('webhook_token', str_random(32));
         }
     }
 
     public function down()
     {
-        Settings::set('token', null);
+        Settings::set('webhook_token', null);
     }
 }

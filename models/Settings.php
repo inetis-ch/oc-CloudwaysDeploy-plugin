@@ -19,6 +19,6 @@ class Settings extends Model
 
     public function getWebHookAttribute()
     {
-        return url('/inetis/cloudwaysdeploy/' . $this->token);
+        return url('/inetis/cloudwaysdeploy/' . $this->webhook_token);
     }
 }
