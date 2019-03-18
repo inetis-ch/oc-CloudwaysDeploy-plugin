@@ -56,3 +56,9 @@ fields:
         label: 'Token used for limit access to deploy URL'
         span: auto
         type: text
+
+    deploy_path:
+        label: 'Path to deploy'
+        span: auto
+        type: text
+        comment: Leave the field empty for deploying in public_html folder

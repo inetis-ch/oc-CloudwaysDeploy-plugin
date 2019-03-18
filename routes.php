@@ -19,7 +19,8 @@ Route::post('inetis/cloudwaysdeploy/{webhook_token}', function ($webhookToken) {
         'server_id'   => Settings::get('server_id'),
         'app_id'      => Settings::get('app_id'),
         'git_url'     => Settings::get('git_url'),
-        'branch_name' => Settings::get('branch_name')
+        'branch_name' => Settings::get('branch_name'),
+        'deploy_path' => Settings::get('deploy_path'),
     ]);
 
     return json_encode($gitPullResponse);
